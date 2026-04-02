@@ -1,0 +1,80 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    height:3000px;
+}
+header{
+    height: 100vh;
+}
+.box-1{
+    height: 100px;
+    width: 400px;
+    margin: 10px;
+    background: rgb(194, 163, 102);
+    animation: appearance ease-in-out;
+    animation-timeline: view();
+    animation-range: entry 100% contain 50%;
+}
+.box-2{
+    margin: 10px;
+    height: 120px;
+    width: 500px;
+    background: rgb(210, 240, 159);
+    animation: vverx;
+    animation-timeline: view();
+    animation-range: entry 0% cover 50%;
+}
+.list{
+    margin: 100px;
+}
+.list-item{
+    padding: 10px;
+    animation: bounceInRight;
+    animation-timeline: view();
+    animation-range: entry 0% cover 50%;
+}
+.main-content{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+@keyframes appearance{
+    from{
+        opacity: 0;
+        transform: scale(0.6);
+    }
+    to{
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+@keyframes bounceInRight{
+    from{
+        opacity: 0;
+        transform: translateX(400%);
+    }
+    to{
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+@keyframes vverx{
+    0%{
+        opacity: 0;
+        transform: scale(0.5);
+        transform: translateX(300%);
+    }
+    50%{
+        opacity: 0.5;
+        transform: scale(1);
+        transform: translateX(0);
+    }
+    100%{
+        opacity: 1; 
+        transform: scale(1.2);
+    }
+}

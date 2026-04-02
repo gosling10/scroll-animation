@@ -1,0 +1,78 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html{
+    scroll-behavior:smooth
+}
+
+header{
+    background: rgb(144, 128, 160);
+    height: 50px;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+.block1{
+    height: 600px;
+    background: rgb(122, 79, 79)
+}
+.block2{
+    height: 600px;
+    background: rgb(88, 165, 209)
+}
+.block3{
+    height: 600px;
+    background: rgb(150, 137, 209)
+}
+footer{
+    background: #ff996a;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+img{
+    height: 200px;
+    width: 200px;
+    object-fit: cover;
+    animation: grow ease-in-out;
+    animation-timeline: view(inline 50% 30%);
+}
+.carousel{
+    overflow-x: scroll;
+    overflow-y: hidden;
+    display: flex;
+    width: 50%;
+}
+.progress-bar{
+    z-index: 10000;
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 5px;
+    width: 100%;
+    background-color: purple;
+    transform-origin: left center;
+    transform: scaleX(0);
+    transition: trahsform 0.2s ease;
+    animation: progress-bar 1s linear;
+    animation-timeline: scroll(root block);
+}
+@keyframes progress-bar{
+    from{
+        transform: scaleX(0);
+    }
+    to{
+        transform: scaleX(1);
+    }
+}
+@keyframes grow{
+    from{
+        transform: scale(1);
+    }
+    to{
+        transform: scale(1.2);
+    }
+}
